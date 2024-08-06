@@ -6,13 +6,13 @@ class Ghomfc < Formula
   desc "Add GitHub Issues and Pull Requests to GitHub Projects
 "
   homepage "https://github.com/suzuki-shunsuke/ghomfc"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.0/ghomfc_darwin_amd64.tar.gz"
-      sha256 "8185bcc6a415ea4054cf8b380c74c72dd9fa52cfed29aa8e76d77af662985547"
+      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_darwin_amd64.tar.gz"
+      sha256 "66f1d5fe0b05008034f3207a866f6e62bd0572201c1a4a4498b729474e3c5179"
 
       def install
         bin.install "ghomfc"
@@ -20,8 +20,8 @@ class Ghomfc < Formula
       end
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.0/ghomfc_darwin_arm64.tar.gz"
-      sha256 "2e784243d657305da39a5240594dd43d432bc258e5fd78c34388e74d52a94f01"
+      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_darwin_arm64.tar.gz"
+      sha256 "fb0260981f1e8827f3d4cbe1c1609e913388ceea55c2fecd38d72b352b451b49"
 
       def install
         bin.install "ghomfc"
@@ -33,8 +33,8 @@ class Ghomfc < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.0/ghomfc_linux_amd64.tar.gz"
-        sha256 "0afa7316ef41c4450b65773ca6be07c7dc6c1e3afe746a4a6a3cb3f48286faaf"
+        url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_linux_amd64.tar.gz"
+        sha256 "dd2d1fb0d781a0fb4067bafdfe8063b586e618c82a4ff49e60388234d71352df"
 
         def install
           bin.install "ghomfc"
@@ -44,8 +44,8 @@ class Ghomfc < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.0/ghomfc_linux_arm64.tar.gz"
-        sha256 "469d390061547c162499859d029340b92707da8e8aecfe30c22ba982fb1bbf5f"
+        url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_linux_arm64.tar.gz"
+        sha256 "35ca5318f75ac1fd3045581258f1c411991ce1ac6aadbcc98dc81a993beb9846"
 
         def install
           bin.install "ghomfc"
