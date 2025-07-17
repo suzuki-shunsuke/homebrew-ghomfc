@@ -3,7 +3,7 @@ cask "ghomfc" do
   desc "Add GitHub Issues and Pull Requests to GitHub Projects
 "
   homepage "https://github.com/suzuki-shunsuke/ghomfc"
-  version "0.1.2"
+  version "0.1.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -13,23 +13,29 @@ cask "ghomfc" do
 
   on_macos do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.2/ghomfc_darwin_amd64.tar.gz"
-      sha256 "f0aea24e66a6c9b4bafbfdb525724db4950d78156ace85d76885a491d2fc02dc"
+      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.3/ghomfc_darwin_amd64.tar.gz"
+      sha256 "847462ebc6a33fdcc1273fe3c11c43eeb63e6f66efd683a08c5fba3659c46734"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.2/ghomfc_darwin_arm64.tar.gz"
-      sha256 "44855024ebab629fc4f575d8ebd96a25b3443225485a21e4cf327dfc28be815e"
+      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.3/ghomfc_darwin_arm64.tar.gz"
+      sha256 "b2424eed97f975687fbe52eb2b30e0e23c8a149acde48247da4e67fa63c3ce0b"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.2/ghomfc_linux_amd64.tar.gz"
-      sha256 "23c5579671ca00b7c86e7bcc2f3dcc73e8821f1edaf54c236efbbdd7905a5502"
+      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.3/ghomfc_linux_amd64.tar.gz"
+      sha256 "3e93eafe31ad83b3bd72e92662d5ffd401d09e2268b2c6590e724351ffcf9589"
     end
     on_arm do
-      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.2/ghomfc_linux_arm64.tar.gz"
-      sha256 "1ecebc76ece7918a4c616e8b7c296376a7c215877ba1aa5bb2828c36831c8227"
+      url "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.3/ghomfc_linux_arm64.tar.gz"
+      sha256 "9fff627d49fcef4efe8a9aed9c534a2e8880021c270aa77192fb500434971407"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ghomfc"]
     end
   end
 
